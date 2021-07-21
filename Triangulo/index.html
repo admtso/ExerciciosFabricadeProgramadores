@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Calculadora Maior</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+</script>
+
+<body>
+    <h1>Triangulo</h1>
+
+    Lado 1: <input id="a" type="number" />
+    Lado 2: <input id="b" type="number" />
+    Lado 3: <input id="c" type="number" />
+    <p></p>
+    <button onclick="triangulo()">Descobrir Triangulo</button>
+
+</body>
+
+<script type="text/javascript">
+    function triangulo() {
+
+        var d = document.getElementById("a").value
+        var e = document.getElementById("b").value
+        var f = document.getElementById("c").value
+
+        var a = parseFloat(d);
+        var b = parseFloat(e);
+        var c = parseFloat(f);
+
+
+        if (a == b && b == c) {
+            alert('Triângulo equilátero');
+
+        }
+        else if (a == b || a == c || c == b) {
+
+            alert("Triângulo isóceles")
+        }
+        else {
+
+            alert("Triângulo escaleno")
+        }
+        console.log(a)
+
+    }
+
+</script>
+
+</html>
