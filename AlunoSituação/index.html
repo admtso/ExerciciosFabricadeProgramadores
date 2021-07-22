@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno Situação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Aluno Situação</h1>
+
+        <input type="number" id="n1" placeholder="Informe a Primeira Nota" />
+        <input type="number" id="n2" placeholder="Informe a Segunda Nota" />
+        <input type="number" id="n3" placeholder="Informa a Terceira Nota" />
+        <p></p>
+
+        <button onclick="media()">Verificar Situação</button>
+    </div>
+    <p id="resultadoId"></p>
+    <p id="resultadoId2"></p>
+    <p id="resultadoId3"></p>
+    <p id="ap"></p>
+
+
+
+</body>
+
+<script>
+    function media() {
+        var n1 = document.getElementById("n1").value;
+        var n2 = document.getElementById("n2").value;
+        var n3 = document.getElementById("n3").value
+
+        var n1Convertido = parseFloat(n1)
+        var n2Convertido = parseFloat(n2)
+        var n3Convertido = parseFloat(n3)
+        var media = (n1Convertido + n2Convertido + n3Convertido) / 3;
+
+
+
+        if (media >= 7) {
+            var apConvertido = 0;
+            apConvertido++;
+            document.getElementById('ap').innerText = apConvertido;
+            document.getElementById('resultadoId').innerText = 'Aprovado';
+            document.getElementById('resultadoId2').innerText = '';
+            document.getElementById('resultadoId3').innerText = '';
+            apCovertido++
+
+
+        }
+        else if (media <= 3) {
+            document.getElementById('resultadoId2').innerText = 'Reprovado!'
+            document.getElementById('resultadoId').innerText = '';
+            document.getElementById('resultadoId3').innerText = '';
+            rpConvertido++
+
+        }
+        else {
+            document.getElementById('resultadoId3').innerText = 'Prova Final!'
+            document.getElementById('resultadoId').innerText = '';
+            document.getElementById('resultadoId2').innerText = '';
+            pfconvertido++
+        }
+
+    }
+</script>
+
+</html>
+</body>
+
+</html>

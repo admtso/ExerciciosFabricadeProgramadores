@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    }
+    
+    h1{
+    padding: 20px;
+    text-align: center;
+    }
+    
+    button{
+    margin-top: 3%;
+    padding: 10px;
+    
+    } 
+
+    #resultadoId{
+    color: green;
+    }
+
+    #resultadoId2{
+    color:red;
+        
+    }
+
+    #resultadoId3{
+    color: yellowgreen;
+        
+    }
+
+   
+
+    
+    
+    
+    
+
