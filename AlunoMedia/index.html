@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Aluno</title>
+    <link rel="stylesheet" href="">
+</head>
+<h1>Média Aluno</h1> <!--Anuncio do Exercicio-->
+
+<body>
+    Primeira Nota: <input id="nota1" type="number" placeholder="Infomre a Primeira Nota" required/>
+    Segunda Nota: <input id="nota2" type="number" placeholder="Informe a Segunda Nota" required/>
+    Terceira Nota: <input id="nota3" type="number" placeholder="Informe o Terceira Nota" required/>
+
+    <button onclick="media()">Média</button>
+
+</body>
+<Script>
+    function media(){
+    var n1 = parseFloat(document.getElementById ("nota1").value);
+    var n2 = parseFloat(document.getElementById ("nota2").value);
+    var n3 = parseFloat(document.getElementById ("nota3").value);
+    
+    var media = (n1+n2+n3)/3;
+    if (media >= 7){
+        alert("Parabens você foi aprovado : " + media).toFixed(2);/*ToFixed - Coloca duas Casas Decimais*/
+    }
+    else if(media<=3){
+        alert("Você foi Reprovado: " + media).toFixed(2);
+    }
+    else{
+        alert("Você esta de Recuperação : " + media).toFixed(2);
+    }
+}
+</Script>
+</html>
