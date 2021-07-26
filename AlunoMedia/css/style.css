@@ -1,0 +1,41 @@
+body{
+text-align: center;
+}
+
+#nota1{
+
+margin-right: 80px;
+
+}
+
+#nota2{
+
+margin-right: 80px;
+    
+ }
+
+#nota3{
+
+margin-right: 80px;
+        
+}
+
+#media{
+padding: 10px;
+margin-top: 50px;
+color: rgb(55, 58, 58);
+background-color: rgb(20, 174, 185);
+border-radius: 10px;
+
+}
+
+h1{
+color: rgb(55, 58, 58); ;
+
+}
+
+#div{
+border-color: brown;
+}
+        
+
