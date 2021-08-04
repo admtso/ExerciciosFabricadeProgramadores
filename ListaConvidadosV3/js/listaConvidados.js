@@ -7,8 +7,10 @@ function adicionarALista() {
     listaConvidados = listaConvidados + "<li>" + nome + "</li>"
 
     document.getElementById("lista").innerHTML = listaConvidados
-    document.getElementById("inputConvidado").value = ""
+   
   } else {
     alert("Preencha o nome do convidado!")
   }
+  
+
 }
