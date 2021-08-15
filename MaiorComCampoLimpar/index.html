@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+</head>
+<h1>Maior Número</h1>
+
+<body>
+    <input id="numero1" type="number" placeholder="Informe 1º número" required />
+    <input id="numero2" type="number" placeholder="Informe 2º número" required />
+    
+    
+
+<button onclick="maior()" >Maior</button>
+<button onclick="limpar()">Limpar</button>
+
+</body>
+<script>
+       
+   function maior(){
+
+        var n1 = parseFloat(document.getElementById("numero1").value)
+        var n2 = parseFloat(document.getElementById("numero2").value)
+        
+        alert("Preencha os Campos")
+
+        if (n1 > n2){
+         alert("O maior número é : " + n1) 
+        }
+        else if (n1 == n2) {
+            alert("Achou que ia me pegar...Os número são iguais");
+        }
+        else {
+            alert("O maior número é : " + n2)
+        }
+    
+   }
+   function limpar(){
+    document.getElementById("numero1").value = "";
+    document.getElementById("numero2").value = "";
+   }
+   
+</script>
+</html>
