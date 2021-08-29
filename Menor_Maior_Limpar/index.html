@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENOR/MAIOR/LIMPAR</title>
+</head>
+<h1>MENOR/MAIOR/LIMPAR</h1>
+
+<body>
+    <input id="numero1" type="number" placeholder="informe 1º número" />
+    <input id="numero2" type="number" placeholder="Informe 2º número" />
+
+    <button onclick="menor()">MENOR</button>
+    <button onclick="maior()">MAIOR</button>
+    <button onclick="limpar()">LIMPAR</button>
+
+
+</body>
+<Script>
+    function menor() {
+        var n1 = parseFloat(document.getElementById("numero1").value)
+        var n2 = parseFloat(document.getElementById("numero2").value)
+
+        if (n1 < n2) {
+            alert("Menor Número é : " + n1);
+        }
+        else {
+
+            alert("Menor Número é : " + n2);
+        }
+    }
+
+    function maior() {
+        var n1 = parseFloat(document.getElementById("numero1").value)
+        var n2 = parseFloat(document.getElementById("numero2").value)
+
+        if (n1>n2) {
+            alert("Maior Número é : " + n1);
+        }
+        else {
+
+            alert("Maior Número é : " + n2);
+        }
+    }
+
+
+    function limpar(){
+            document.getElementById("numero1").value = "";
+            document.getElementById("numero2").value = "";
+        }
+</Script>
+
+</html>
