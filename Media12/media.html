@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <img src="Imagem/pexels-max-fischer-5212317.jpg" alt="">
+    <title>Média Aluno</title>
+</head>
+<h1>Média Aluno</h1>
+
+<body>
+    <input id="nota1" type="number" placeholder="Informe a 1º Nota" required />
+    <input id="nota2" type="number" placeholder="Informe a 2º Nota" required />
+    <input id="nota3" type="number" placeholder="Informe a 3º Nota" required />
+
+    <button id="media" onclick="media()">MÉDIA</button>
+    <button id="limpar" onclick="limpar()">LIMPAR</button>
+</body>
+<script>
+    function media() {
+        var n1 = parseFloat(document.getElementById("nota1").value);
+        var n2 = parseFloat(document.getElementById("nota2").value);
+        var n3 = parseFloat(document.getElementById("nota3").value);
+
+        var media = (n1 + n2 + n3) / 3;
+
+        if (media >= 7) {
+            alert("Parabéns você foi aprovado : " + media.toFixed(2));
+        }
+        else if (media <= 3) {
+            alert("Vocé esta reprovado : " + media.toFixed(2));
+        }
+        else {
+            alert("Recuperação - Estude para a prova do dia 12/12/2021 : NOTA : "+ media.toFixed(2));
+        }
+
+    }
+function limpar(){
+document.getElementById("nota1").value="";
+document.getElementById("nota2").value="";
+document.getElementById("nota3").value="";
+}
+</script>
+</html>
