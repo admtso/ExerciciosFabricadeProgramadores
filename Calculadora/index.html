@@ -1,47 +1,69 @@
 <html>
-  <head>
+
+<head>
     <title>Calculadora HT</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/estilo.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="card">
-      <h1>Calculadora HT</h1>
+        <h1>Calculadora HT</h1>
 
-      <input type="number" id="numero1" placeholder="Número 1" />
-      <input type="number" id="numero2" placeholder="Número 2" />
+        <input type="number" id="numero1" placeholder="Número 1" />
+        <input type="number" id="numero2" placeholder="Número 2" />
 
-      <button onclick="somar()">Somar</button>
-      <button onclick="dividir()">Dividir</button>
+        <button onclick="somar()">Somar</button>
+        <button onclick="dividir()">Dividir</button>
+        <button onclick="diminuir()">Diminuir</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="limpar()">Limpar</button>
+
     </div>
-  </body>
+</body>
 
-  <script>
+<script>
     function somar() {
-      var n1 = document.getElementById("numero1").value
-      var n2 = document.getElementById("numero2").value
+        var n1 = document.getElementById("numero1").value
+        var n2 = document.getElementById("numero2").value
 
-      var n1Convertido = parseFloat(n1)
-      var n2Convertido = parseFloat(n2)
-      var soma = n1Convertido + n2Convertido
+        var n1Convertido = parseFloat(n1)
+        var n2Convertido = parseFloat(n2)
+        var soma = n1Convertido + n2Convertido
 
-      // console.log(soma)
-      alert("O resultado da soma é: " + soma)
+        // console.log(soma)
+        alert("O resultado da soma é: " + soma)
     }
 
     function dividir() {
-      var n1 = document.getElementById("numero1").value
-      var n2 = document.getElementById("numero2").value
+        var n1 = document.getElementById("numero1").value
+        var n2 = document.getElementById("numero2").value
 
-      var n1Convertido = parseFloat(n1)
-      var n2Convertido = parseFloat(n2)
+        var n1Convertido = parseFloat(n1)
+        var n2Convertido = parseFloat(n2)
 
-      if (n2Convertido != 0) {
-        var divisao = n1 / n2
-        alert("O resultado da divisão é: " + divisao)
-      } else {
-        alert("Não pode dividir por zero!")
-      }
+        if (n2Convertido != 0) {
+            var divisao = n1 / n2
+            alert("O resultado da divisão é: " + divisao.toFixed(2))
+        } else {
+            alert("Não pode dividir por zero!")
+        }
     }
-  </script>
+    function limpar() {
+        document.getElementById("numero1").value = ""
+        document.getElementById("numero2").value = ""
+    }
+    function diminuir(){
+    var n1=parseFloat(document.getElementById("numero1").value);
+    var n2=parseFloat(document.getElementById("numero2").value);
+    var diminuir=(n1-n2)
+    alert("A Subitração é : " + diminuir) 
+    }
+    function multiplicar(){
+    var n1=parseFloat(document.getElementById("numero1").value);
+    var n2=parseFloat(document.getElementById("numero2").value);
+    var multiplicar=(n1*n2)
+    alert("O Resultado da Multiplicação é : " + multiplicar);
+    }
+</script>
 </html>

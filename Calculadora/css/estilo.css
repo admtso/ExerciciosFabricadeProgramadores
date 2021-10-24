@@ -8,7 +8,7 @@ body {
     padding: 60px;
     border: 1px solid black;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #d0d4d4;
     border-radius: 10px;
     box-shadow: 1px 1px 20px gray;
   }
@@ -22,7 +22,7 @@ body {
   
   .card button {
     padding: 14px;
-    background-color: darkorange;
+    background-color: rgb(22, 175, 180);
     color: white;
     border: none;
     margin-top: 10px;
