@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior</title>
+    <style>
+     body{
+     background-color: rgb(160, 180, 180);
+     text-align: center;
+     margin-top: 70px;
+     }   
+     div{
+     background-color: rgb(25, 155, 187);
+     }
+    </style>
+</head>
+<div>
+<h1>MAIOR NÚMERO ENTRE TRÊS NÚMEROS</h1>
+</div>
+<body>
+    <input style="text-align: center;" id="numero1" type="number" placeholder="Informe o 1º número" required>
+    <input style="text-align: center;" id="numero2" type="number" placeholder="Informe o 2º número" required>
+    <input style="text-align: center;" id="numero3" type="number" placeholder="Informe o 3º número" required>
+
+    <button onclick="maior()">MAIOR</button>
+    <button onclick="limpar()">LIMPAR</button>
+
+    <script>
+        function maior() {
+            var n1 = parseFloat(document.getElementById("numero1").value)
+            var n2 = parseFloat(document.getElementById("numero2").value)
+            var n3 = parseFloat(document.getElementById("numero3").value)
+             
+            if(n1==n2 && n2==n3){
+              alert("Todos os Números são Iguais").break
+            }
+            if (n1 > n2 && n1 > n3) {
+            alert("Maior Número é : " + n1);
+
+            } else if (n2 > n1 && n2 > n3) {
+                alert("Maior Número é : " + n2);
+            } else{
+                (n3 == n2 && n3 == n1)
+                alert("Maior Número é : " + n3);
+            
+            }
+
+        }
+            function limpar() {
+                document.getElementById("numero1").value = "";
+                document.getElementById("numero2").value = "";
+                document.getElementById("numero3").value = "";
+            }
+        
+
+    </script>
+</body>
+
+</html>
