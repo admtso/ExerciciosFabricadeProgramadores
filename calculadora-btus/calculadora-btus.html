@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora BTUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            text-transform: uppercase;
+            color: #23346D;
+            margin-bottom: 50px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #23346D;
+        }
+
+        label {
+            display: inline-block;
+            font-weight: bold;
+            color: #23346D;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .formulario {
+            width: 600px;
+            margin: auto;
+        }
+
+        button {
+            background-color: #44D389;
+            border: none;
+            padding: 20px 70px;
+            color: white;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .botao {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora de BTUS</h1>
+
+    <div class="formulario">
+        <label for="areaComodo">Área do cômodo (m²)</label>
+        <input id="areaComodo" type="number">
+
+        <label for="quantidadePessoas">Quantidade de pessoas no cômodo</label>
+        <input id="quantidadePessoas" type="number">
+
+        <label for="quantidadeEletronicos">Quantidade de eletrônicos</label>
+        <input id="quantidadeEletronicos" type="number">
+
+        <div class="botao">
+            <button onclick="calcular()">Calcular</button>
+        </div>
+    </div>
+
+
+    <script>
+        function calcular() {
+            // 1 - Pegar área do cômodo
+            let areaComodo = document.getElementById("areaComodo").valueAsNumber
+            // 2 - Pegar a quantidade de pessoas no cômodo
+            let quantidadePessoas = document.getElementById("quantidadePessoas").valueAsNumber
+            // 3 - Pegar a quantidade de eltrônicos
+            let quantidadeEletronicos = document.getElementById("quantidadeEletronicos").valueAsNumber
+            // 4 - Fazer o cálculo de BTUS
+            let resultado = (areaComodo * 600) + ((quantidadePessoas - 1) * 600) + (quantidadeEletronicos * 600)
+            // 5 - Exibir o resultado em um alert
+            alert("É necessário um ar-condicionado com " + resultado + " BTUS para este cômodo")
+        }
+    </script>
+</body>
+
+</html>
