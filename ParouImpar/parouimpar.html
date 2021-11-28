@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+    <style>
+    body{
+    text-align: center;
+    background-color: rgb(2, 27, 27);
+    margin-top: 80px;
+    }
+
+    h1{
+    background-color: white;
+    width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+   
+
+    input{
+        text-align: center;
+        background-color: rgb(223, 223, 194);
+    }
+
+
+
+
+    </style>
+</head>
+<h1>Par ou Impar</h1>
+
+<body>
+    <input id="n" type="number" placeholder="Informe um Número">
+
+    <button onclick="classificacao()">Par ou Impar</button>
+
+    <script>
+        function classificacao() {
+
+            if (document.getElementById("n").value == "") {
+                alert("Por favor, Preencha o Campo : ");
+                document.getElementById("n").focus();
+                return false
+            }
+            let n = document.getElementById("n").valueAsNumber;
+            let total = (n / 2);
+            if (n % 2 == 0) {
+                alert("O Número : " + n + " É Par")
+            }
+            else {
+                alert("O Número : " + n + " É Impar")
+            }
+            document.getElementById("n").value = "";
+        }
+
+    </script>
+</body>
+
+</html>
