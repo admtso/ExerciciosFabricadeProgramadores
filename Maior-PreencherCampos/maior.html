@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*E a configuração do css*/
+        body {
+            background-color: rgb(48, 94, 48);
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        div {
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(162, 173, 132);
+        }
+    </style>
+    <title>Maior</title>
+</head>
+<div>
+    <h1>Maior Número</h1>
+
+    <body>
+        <P>
+            Informe 1º Número:
+            <input id="ladoA" type="number" placeholder="Informe um Número">
+        </P>
+        Informe 2º Número:
+        <input id="ladoB" type="number" placeholder="Informe um Número">
+        <P></P>
+
+        <button onclick="classificacao()">Maior Numero</button>
+</div>
+<script>
+
+    function classificacao() {
+        let a = document.getElementById("ladoA").valueAsNumber;
+        let b = document.getElementById("ladoB").valueAsNumber;
+        
+
+        //Verifica se os campos estão preenchidos//
+        if (document.getElementById("ladoA" && "ladoB").value == "") {
+            alert("Por favor, Preencha o Campo: ");
+            document.getElementById("ladoA" && "ladoB" ).focus();
+            return false
+        }
+        //Maior Número//
+        if (a > b) {
+            alert("O maior número é : " + a)
+        }else {
+            alert("O maior número é: " +  b)
+        }
+
+        //Limpa os Campos//
+        document.getElementById('ladoA').value = ""
+        document.getElementById('ladoB').value = ""
+        
+    }
+</script>
+</body>
