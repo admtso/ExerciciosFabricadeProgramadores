@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Controle de Contas</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        
+        <h1>Controle de Contas</h1>
+       
+        <form>
+            <label for="receita">Receita</label>
+            <input id="receita" type="number" placeholder="Valor da receita">
+            <button onclick="adicionarReceita()" type="button">Adicionar</button>
+
+            <label for="despesa">Despesa</label>
+            <input id="despesa" type="number" placeholder="Valor da Despesa">
+            <button onclick="adicionarDespesa()" type="button">Adicionar</button>
+        </form>
+        <div>
+            <p>Total de receitas: R$<span id="totalReceita" class="texto-verde">0.00</span></p>
+            <p>Total de despesas: R$<span id="totalDespesa" class="texto-vermelho">0.00</span></p>
+            <p>Balanço: R$<span id="balanco">0.00</span></p>
+        </div>
+
+        <script src="scrit.js"></script>
+    </body>
+</html>

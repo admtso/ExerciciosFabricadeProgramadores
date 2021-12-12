@@ -1,0 +1,38 @@
+.texto-verde{
+  color: #81e481;
+}
+
+.texto-vermelho{
+  color: #eC6161;
+}
+
+body{
+ background-color: whitesmoke;
+  text-align: center;
+  margin-top: 70px;
+  }
+
+  h1{
+  background-color: #61ecd9;
+  padding: 30px;
+  border-top-style: solid;
+  border-top-color: #000;
+  
+  
+  text-align: center;
+  }
+
+  input{
+  background-color: #61ecd9;
+  text-align: center;
+  color: #373832;
+  margin: 20px;
+  }
+
+  button{
+  background-color: rgba(3, 46, 30, 0.185);
+  border-radius: 10px;
+  color: #184c4e;
+  }
+
+ 
