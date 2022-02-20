@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nacionalidade</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<h1>Brasileiro ou Estrangeiro?</h1>
+
+<body>
+    DIGITE SEU PAÍS DE ORIGEM: <input type="text" nome="verifica" id="Verifica" style="text-align: center;">
+    <input type="button" value="Click Aqui" onclick="validar()" >
+    <p></p>
+    <p></p>
+    <button id="nacionalidade">Sua resposta aparecerá aqui</button>
+
+    <script>
+        let Verifica = document.getElementById("Verifica");
+        let nacionalidade = document.getElementById("nacionalidade")
+
+        function validar() {
+            if (Verifica.value == "Brasil" || Verifica.value == "BRASIL" || Verifica.value == "brasil") {
+                nacionalidade.innerText = ("Você é Brasileiro")
+            } else {
+                nacionalidade.innerText=("Você é Estrangeiro")
+            }
+
+        }
+    </script>
+</body>
+</html>

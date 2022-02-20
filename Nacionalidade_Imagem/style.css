@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    background-image: url(pngwing.com.png);
+    background-size: cover;
+    padding: 200px;
+    background-position: 50px;  
+}
+
+#nacionalidade{
+background-color: rgba(94, 235, 94, 0.829);;
+}
+
+input{
+   background-color: rgba(94, 235, 94, 0.829);
+}
